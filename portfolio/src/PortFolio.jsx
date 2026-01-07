@@ -38,10 +38,10 @@ function PortFolio() {
 
     emailjs
       .sendForm(
-        "service_3ibualx",
-        "template_luodv6b",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        "EubcPtCWBgGqeeiO8"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
