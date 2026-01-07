@@ -1,0 +1,219 @@
+/* Hero */
+.hero {
+  background: #29154c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  padding-top: 90px; /* To accommodate fixed navbar */
+}
+
+/* Buttons */
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.btn-hover.color-2 {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+/* Social Icons */
+.socialIcons {
+  margin-top: 30px;
+}
+
+.icons {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons li {
+  list-style: none;
+}
+
+.icons li a {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #404040;
+  transition: 0.5s;
+}
+
+.icons li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+/* Horizontal lines */
+.icons li a span:nth-child(1),
+.icons li a span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #404040;
+}
+.icons li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.icons li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.icons li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.icons li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* Vertical lines */
+.icons li a span:nth-child(2),
+.icons li a span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #404040;
+}
+.icons li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.icons li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+}
+.icons li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.icons li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+}
+
+/* Hover Colors */
+.LinkedIn:hover {
+  color: #0e76a8;
+}
+.GitHub:hover {
+  color: #171515;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .icons li a {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 28px;
+  }
+
+  .btn-hover {
+    width: 150px;
+    font-size: 14px;
+    height: 45px;
+  }
+}
+.skill {
+  font-size: 14px;
+  border: solid 1px #ccc;
+  padding: 20px 30px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  color: aliceblue;
+}
+.skill:hover {
+  font-size: 14px;
+  border: solid 2px #f30000;
+  padding: 20px 30px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.custom-navbar {
+  width: 40%; /* ما تكونش عريضة بزاف */
+  border-radius: 12px;
+  padding: 6px 0;         /* نقص الارتفاع */
+  z-index: 1000;
+  margin: 5px auto;        /* وسطها */
+}
+.custom-navbar .nav-link {
+  font-size: 14px; /* نقص حجم الخط */
+  padding: 8px 12px; /* نقص البادينغ */
+}
+.custom-navbar .nav-link:hover {
+  background-color: #575757; /* لون خلفية عند المرور */
+  border-radius: 8px;       /* زوايا مدورة عند المرور */
+}
+.Tools{
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d0ff00;
+  border: #25aae1 solid 2px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+#projects img:hover,#projects span:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
