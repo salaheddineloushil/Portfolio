@@ -62,39 +62,55 @@ function PortFolio() {
             <a className="navbar-brand fw-bold fs-4 text-warning" href="/">
               PortFolio
             </a>
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#home">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#skills">
-                  Skills
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#projects">
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#experience">
-                  Experience
-                </a>
-              </li>
 
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
+            {/* زر 3 الخطوط */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {/* المينيو */}
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="#home">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#about">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#skills">
+                    Skills
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#projects">
+                    Projects
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#experience">
+                    Experience
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
 
@@ -163,14 +179,14 @@ function PortFolio() {
         <section className="container my-5" id="about">
           <div className="row justify-content-center align-items-center text-light">
             <h1 className="my-4 p-4">About</h1>
-            <div className="col-6">
+            <div className="col-lg-6 col-md-12">
               <img
                 src="photo.jpeg"
                 alt="Salah Eddine Loushil"
-                className="rounded-circle w-50"
+                className="rounded-circle w-50 mb-4 mx-auto d-block"
               />
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-md-12">
               <p className="mb-2">
                 ✨ About Me As a passionate and creative full-stack web
                 developer, I design and build high-performance web applications
@@ -206,7 +222,7 @@ function PortFolio() {
           <h1 className="py-4 text-light display-1">My Skills</h1>
           <div className="categorie py-4">
             <h2 className="text-danger">Fronend</h2>
-            <div className="py-4">
+            <div className="py-4 d-flex flex-wrap justify-content-center">
               <span className="skill">
                 <FaHtml5 /> HTML
               </span>
@@ -226,7 +242,7 @@ function PortFolio() {
           </div>
           <div className="categorie py-4">
             <h2 className="text-danger">Backend</h2>
-            <div className="py-4">
+            <div className="py-4 d-flex flex-wrap justify-content-center">
               <span className="skill">
                 <FaPhp /> PHP
               </span>
@@ -243,7 +259,7 @@ function PortFolio() {
           </div>
           <div className="categorie py-4">
             <h2 className="text-danger">Databases</h2>
-            <div className="py-4">
+            <div className="py-4 d-flex flex-wrap justify-content-center">
               <span className="skill">
                 <SiMongodb /> MongoDB
               </span>
@@ -254,7 +270,7 @@ function PortFolio() {
           </div>
           <div className="categorie py-4">
             <h2 className="text-danger">DevOps & Cloud</h2>
-            <div className="py-4">
+            <div className="py-4 d-flex flex-wrap justify-content-center">
               <span className="skill">
                 <FaAws /> AWS
               </span>
@@ -273,7 +289,7 @@ function PortFolio() {
           </div>
           <div className="categorie py-4">
             <h2 className="text-danger">Tools & Platforms</h2>
-            <div className="py-4">
+            <div className="py-4 d-flex flex-wrap justify-content-center">
               <span className="skill">
                 <SiAdobephotoshop /> Adobe Photoshop
               </span>
@@ -295,14 +311,14 @@ function PortFolio() {
           <h1 className="py-4 text-light display-1">Projects</h1>
           <div className="container">
             <div className="row">
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12">
                 <img
                   src="projet1.png"
                   alt="TODO APP"
                   className="w-100 rounded"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12 ">
                 <h4 className="text-white">TODO APP</h4>
                 <p className="text-white">
                   A simple todo application built with React and Laravel.
